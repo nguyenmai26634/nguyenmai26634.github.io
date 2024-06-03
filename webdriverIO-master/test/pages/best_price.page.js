@@ -158,14 +158,12 @@ class Bestprice {
     const fromDateValue = this.xpathPickDate(fromDate);
     await this.waitUntilThenClick(fromDateValue, 2000);
 
-    // //add Passenger
-    // const numberPassenger = await $(this.xpathPassenger);
-    // await numberPassenger.click();
-    // const childPlus = this.xpathChildPlus;
-    // await this.waitUntilThenClick(childPlus, 2000);
-    // await expect(await browser.$('//input[@class="CHD"]').getValue()).toEqual("1");
-
-    // findDateElement()
+    //add Passenger
+    const numberPassenger = await $(this.xpathPassenger);
+    await numberPassenger.click();
+    const childPlus = this.xpathChildPlus;
+    await this.waitUntilThenClick(childPlus, 2000);
+    await expect(await browser.$('//input[@class="CHD"]').getValue()).toEqual("1");
 
     // find and click "Tìm chuyến bay"
     const timKiemBtn = await $(this.xpathTimKiem);
